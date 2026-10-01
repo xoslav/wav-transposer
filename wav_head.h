@@ -1,6 +1,8 @@
 #ifndef WAV_HEAD_H
 #define WAV_HEAD_H
 
+#include <string.h>
+
 #define BLOCK_SIZE 16
 #define AUDIO_FORMAT 1
 #define NBR_CHANNELS 1
@@ -9,16 +11,6 @@
 #define TIME_LENGTH 13
 #define DATA_BUFFER_SIZE TIME_LENGTH *FREQUENCY
 #define AMPLITUDE 45000
-
-// maybe move later
-#define B3 246.94
-#define C4 261.63
-#define D4 293.66
-#define E4 329.63
-#define G4B 369.99
-#define G4 392.00
-#define A4 440.00
-#define B4 493.88
 
 typedef struct {
 	char riffID[4];
@@ -36,11 +28,6 @@ typedef struct {
 	unsigned int DataSize;
 } wavHeader;
 
-typedef struct {
-	double note;
-	double start;
-	double end;
-} noteDuration;
-
 void populateHead(wavHeader *header);
+
 #endif

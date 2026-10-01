@@ -1,6 +1,6 @@
 CC = clang
 CFLAGS = -std=c11 -Wall -Wextra -pedantic -Werror -lm 
-MAIN_DEPS = wav_main.c wav_head.c
+MAIN_DEPS = wav_main.c wav_head.c melody.c
 
 main: $(MAIN_DEPS)
 	$(CC) $(CFLAGS) $^ -o $@

@@ -1,5 +1,4 @@
 #include "wav_head.h"
-#include <string.h>
 
 void populateHead(wavHeader *header) {
 	strncpy(header->riffID, "RIFF", 4);
