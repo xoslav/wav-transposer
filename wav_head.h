@@ -36,5 +36,11 @@ typedef struct {
 	unsigned int DataSize;
 } wavHeader;
 
-wavHeader populateHead(wavHeader header);
+typedef struct {
+	double note;
+	double start;
+	double end;
+} noteDuration;
+
+void populateHead(wavHeader *header);
 #endif
